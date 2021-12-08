@@ -4,20 +4,34 @@
 int main(void)
 {
 
-  int n = 5;
-  while (n > 0)
+  int n = get_int("Height: ");
+
+  while (n < 1 || n > 25)
   {
-    for (int i = 0; i < n; i++)
+    n = get_int("Please enter a value between 1 and 25: ");
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+    
+    for (int j = 0; j <= n - i; j++)
     {
-      printf("i");
-      for (int j = 0; j < n; j++)
-      {
-        printf("#");
-      }
+      printf(" ");
+    }
+
+    for (int k = 0; k <= i; k++)
+    {
+      printf("#");
+    }
+
+    printf(" ");
+
+    for (int l = 0; l <= i; l++)
+    {
+      printf("#");
     }
 
     printf("\n");
-    n--;
   }
 }
 
